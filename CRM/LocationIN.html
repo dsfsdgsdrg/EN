@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+<title>Service Location</title>
+<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css"> 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
+<link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+<link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+</head>
+    
+<body class="theme-light">
+  <div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
+  <div id="page">
+    
+    <div class="header header-fixed header-logo-center header-auto-show">
+        <a href="#" class="header-title">Service Location India</a>
+        <a href="Dashboard.html" data-back-button class="header-icon header-icon-1"><i class="fas fa-chevron-left"></i></a>
+    </div>
+
+    <div id="footer-bar" class="footer-bar-2">
+        <a href="Dashboard.html" ><i class="fas fa-chevron-left"></i><span>Back</span></a>
+        <a href="JoinFees.html"><i class="bi bi-chat-heart"></i><span>Register</span></a>
+    </div>
+    
+
+
+<div class="page-title-clear"></div>
+
+<div class="page-content">
+
+     <div class="card card-style bg-theme pb-0">
+            <div class="content" id="tab-group-1">
+                <div class="tab-controls tabs-small tabs-rounded" data-highlight="bg-highlight">
+                    <a href="#" data-active data-bs-toggle="collapse" data-bs-target="#">India</a>
+                    <a href="LocationBD.html" data-bs-toggle="collapse" data-bs-target="#">Bangladesh</a>
+                    <a href="LocationPK.html" data-bs-toggle="collapse" data-bs-target="#">Pakistan</a>
+                </div>
+              
+
+<br>
+
+   
+<style>
+    h2 {
+        color: #333;
+        text-align: center;
+    }
+    p {
+        color: dodgerblue;
+        text-align: center;
+        font-weight: bold;
+        font-style: italic;
+        
+    }
+    #searchInput {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ff0000;
+        border-radius: 5px;
+        font-size: 16px;
+        display: block;
+        margin: 0 auto;
+        transition: background-color 0.3s;
+    }
+
+    #searchInput:hover {
+        background-color: #e0e0e0;
+    }
+
+    #list {
+        list-style-type: none;
+        padding: 0;
+        width: 300px;
+        background-color: #fff;
+        color: dodgerblue;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin: 0 auto;
+    }
+
+    li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        opacity: 0;
+        font-weight: bold;
+        animation: fadeIn 0.5s ease forwards;
+        transition: background-color 0.3s;
+    }
+
+    li:last-child {
+        border-bottom: none;
+    }
+
+    li:hover {
+        background-color: #0095ff;
+        border-radius: 10px;
+        color: #ffffff;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+
+    #noResult {
+        text-align: center;
+        background-color: #ff0000;
+        border-radius: 20px;
+        color: #ffffff; /* Pink color */
+        margin-top: 10px;
+        display: none;
+    }
+</style>
+<h2 style="text-align:center;"><p style="color: #00b300 ;"><div class="divider"><i class="fa-solid fa-magnifying-glass-location fa-shake" style="color: #ff0000;"></i>Service Provide Area</div></p></h2>
+<p><i class="fa-solid fa-circle-exclamation" style="color: dodgerblue;"></i> <b>Please enter correct spelling in English</b> </p>
+
+<input type="text" id="searchInput" oninput="filterList()" placeholder="Example : Surat">
+<br>
+<p><i class="fa-solid fa-turn-down"></i>Job Vacancy available City list</p>
+<ol id="list">
+    <li>Mumbai</li>
+    <li>Surat</li>
+    <li>Pune</li>
+    <li>Jaipur</li>
+    <li>Lucknow</li>
+    <li>Kanpur</li>
+    <li>Nagpur</li>
+    <li>Indore</li>
+    <li>Thane</li>
+    <li>Bhopal</li>
+    <li>Visakhapatnam</li>
+    <li>Pimpri</li>
+    <li>Chinchwad</li>
+    <li>Patna</li>
+    <li>Vadodara</li>
+    <li>Ghaziabad</li>
+    <li>Ludhiana</li>
+    <li>Agra</li>
+    <li>Nashik </li>
+    <li>Faridabad</li>
+    <li>Meerut </li>
+    <li>Rajkot </li>
+    <li>Kalyan </li>
+    <li>Dombivali </li>
+    <li>Vasai Virar</li>
+    <li>Varanasi </li>
+    <li>Srinagar </li>
+    <li>Aurangabad </li>
+    <li>Dhanbad </li>
+    <li>Amritsar </li>
+    <li>Navi Mumbai</li>
+    <li>Ranchi</li>
+    <li>Haora </li>
+    <li>Coimbatore </li>
+    <li>Jabalpur </li>
+    <li>Gwalior </li>
+    <li>Vijayawada </li>
+    <li>Jodhpur </li>
+    <li>Madurai </li>
+    <li>Raipur </li>
+    <li>Kota </li>
+    <li>Guwahati </li>
+    <li>Chandigarh </li>
+    <li>Solapur </li>
+    <li>Hubli </li>
+    <li>Dharwad </li>
+    <li>Bareilly </li>
+    <li>Moradabad </li>
+    <li>Gurgaon </li>
+    <li>Aligarh </li>
+    <li>Jalandhar </li>
+    <li>Tiruchirappalli </li>
+    <li>Bhubaneswar </li>
+    <li>Salem </li>
+    <li>Mira </li>
+    <li>Bhayander</li>
+    <li>Thiruvananthapuram</li>
+    <li>Bhiwandi </li>
+    <li>Saharanpur </li>
+    <li>Gorakhpur </li>
+    <li>Guntur </li>
+    <li>Bikaner </li>
+    <li>Amravati </li>
+    <li>Noida </li>
+    <li>Jamshedpur </li>
+    <li>Bhilai Nagar</li>
+    <li>Warangal </li>
+    <li>Cuttack</li>
+    <li>Firozabad </li>
+    <li>Kochi </li>
+    <li>Bhavnagar </li>
+    <li>Dehradun</li>
+    <li>Durgapur </li>
+    <li>Asansol </li>
+    <li>Nanded Waghala</li>
+    <li>Kolapur </li>
+    <li>Ajmer </li>
+    <li>Gulbarga</li>
+    <li>Jamnagar </li>
+    <li>Ujjain </li>
+    <li>Loni </li>
+    <li>Siliguri </li>
+    <li>Jhansi </li>
+    <li>Ulhasnagar  </li>
+    <li>Nellore </li>
+    <li>Jammu </li>
+    <li>Sangli Miraj Kupwad</li>
+    <li>Belgaum </li>
+    <li>Mangalore </li>
+    <li>Ambattur </li>
+    <li>Tirunelveli </li>
+    <li>Malegoan</li>
+    <li>Gaya </li>
+    <li>Jalgaon</li>
+    <li>Udaipur </li>
+    <li>Maheshtala </li>
+    <li>Delhi </li>
+    <li>Bangalore</li>
+    <li>Hyderabad </li>
+    <li>Chennai </li>
+    <li>Rajasthan </li>
+    <li>Maharashtra </li>
+    <li>Uttar Pradesh UP</li>
+    <li>Madhya Pradesh MP</li>
+    <li>Haryana </li>
+    <li>Gujarat</li>
+    <li>Jammu & Kashmir</li>
+    <li>Tamil Nadu </li>
+    <li>West Bengal </li>
+    <li>West Bengal </li>
+    <li>Orissa </li>
+    <li>Kerala </li>
+    <li>Bihar </li>
+    <li>Telangana</li>
+</ol>
+
+<div id="noResult" class="no-result" style="display: none;"><br>No Result,<br> If No Result<br> Please Contact Customer Care <br>
+    Location Server Last update 13 March 2023 ,,,<br>... </div>
+
+<script>
+    function filterList() {
+        var input, filter, ol, li, txtValue, noResult;
+        input = document.getElementById('searchInput');
+        filter = input.value.toUpperCase();
+        ol = document.getElementById('list');
+        li = ol.getElementsByTagName('li');
+        noResult = document.getElementById('noResult');
+
+        for (var i = 0; i < li.length; i++) {
+            txtValue = li[i].textContent || li[i].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = '';
+            } else {
+                li[i].style.display = 'none';
+            }
+        }
+
+        var visibleItems = Array.from(li).filter(item => item.style.display !== 'none');
+        if (visibleItems.length === 0) {
+            noResult.style.display = 'block';
+        } else {
+            noResult.style.display = 'none';
+        }
+    }
+</script>
+<br><br>
+<style>
+    #toast-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  text-align: center;
+}
+
+#toast {
+  display: none;
+  padding: 15px;
+  background-color: #ff0000;
+  color: #fff;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 1s;
+  display: flex;
+  align-items: center;
+}
+
+    #toast-icon {
+      font-size: 24px;
+      color: white;
+      margin-right: 10px;
+    }
+
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(255, 0, 0);
+      z-index: 999;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; }
+      25% { opacity: 1; }
+      75% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    #toast.show {
+      display: flex;
+      animation: fadeInOut 4s ease-in-out;
+    }
+  </style>
+   
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+</body>

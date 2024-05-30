@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+<title>Join</title>
+<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css"> 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
+<link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+<link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+</head>
+    
+<body class="theme-light">
+  <div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
+  <div id="page">
+    
+    <div class="header header-fixed header-logo-center header-auto-show">
+        <a href="#" class="header-title">Register Forms</a>
+        <a href="Dashboard.html" data-back-button class="header-icon header-icon-1"><i class="fas fa-chevron-left"></i></a>
+    </div>
+
+    <div id="footer-bar" class="footer-bar-2">
+        <a href="Dashboard.html" ><i class="fas fa-chevron-left"></i><span>back</span></a>
+        <a href="Login.html" ><i class="bi bi-person"></i><span>Login</span></a>
+        <a href="#" data-menu="menu-forgot"><i class="bi bi-key"></i><span>Forget Password</span></a>
+    </div>
+    
+
+
+<div class="page-title-clear"></div>
+<div class="page-content">
+    <marquee style="font-family:Book Antiqua; color: #FFFFFF" bgcolor="red" 
+    scrollamount="15">If You Have Any Qustion Please Read <b>Qustion & Answer</b> Page or Contact Us</marquee>  
+   
+ <iframe src="https://tally.so/embed/m6ddGB?hideTitle=1&transparentBackground=1&dynamicHeight=1" width="100%" height="700">
+</iframe> 
+
+<!-- Page content ends here-->
+
+<div id="loginincorrect" 
+class="menu menu-box-modal rounded-xl" 
+data-menu-hide="1000"
+data-menu-width="320"
+data-menu-height="200">
+<h1 class="text-center fa-5x mt-2 pt-3 pb-2"><i class="fa fa-times-circle color-red-light"></i></h1>
+<h2 class="text-center">account doesn't exist<br><br> Please Contact Us</h2>
+</div>
+<div id="menu-forgot" 
+class="menu menu-box-modal rounded-m" 
+data-menu-height="220" 
+data-menu-width="350">
+<div class="menu-title">
+   <p class="color-highlight">Let's get you into your account</p>
+   <h1 class="font-24">Recover Password</h1>
+   <a href="#" class="close-menu"><i class="fa fa-times-circle"></i></a>
+</div>
+
+<div class="content mt-1">
+   <div class="input-style no-borders has-icon validate-field mb-4">
+       <i class="fa fa-user"></i>
+       <input type="name" class="form-control validate-name" id="form1ab" placeholder="Email">
+       <label for="form1ab" class="color-highlight font-11 font-500">Email</label>
+       <i class="fa fa-times disabled invalid color-red-dark"></i>
+       <i class="fa fa-check disabled valid color-green-dark"></i>
+       <em>(required)</em>
+   </div>
+                       <a href="#" class="btn btn-full btn-m shadow-l rounded-s bg-highlight font-600 mt-4"  data-menu="loginincorrect">SEND RECOVERY EMAIL</a>
+</div>
+</div>     
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+
+</body>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-+ChJjweTepIzq/5+tA+Zt6VODK4q1sLBsa4xwU6of1guY+XBRb/hPjcgdKh8M8K0" crossorigin="anonymous">
+</head>
+<body>
+    <!-- Loading screen -->
+    <div class="loading-screen">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Realman <i class="fa-regular fa-comment-dots fa-shake" style="color: #ffffff;"></i></h1>
+    </header>
+
+    <!-- Main Content -->
+    <main class="content">
+        <div class="box">
+            <h4 class="center"><i class="fa-solid fa-circle-dot fa-fade" style="color: #63E6BE;"></i> Customer Support</h4>
+            <!-- Avatar images -->
+            <div class="avatar-container">
+                <img src="images/SupportTeam/1.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/2.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/3.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/4.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/5.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/6.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/7.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/8.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/9.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/10.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/11.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/12.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/13.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/14.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/15.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/16.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/17.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/18.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/19.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/20.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/21.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/22.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/23.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/24.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/25.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/26.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/29.png" alt="Avatar" class="avatar">
+                <img src="images/SupportTeam/30.png" alt="Avatar" class="avatar"><br><br>
+            </div>
+ <a href="#" id="chatNowBtn" class="btn"><i class="fa-regular fa-comment-dots fa-shake" style="color: #ffffff;"></i> Open Customer Support LiveChat</a>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/d5ed6967fa.js" crossorigin="anonymous"></script>
+<!-- CRISP chat system script -->
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="2b26d4f4-d926-4a1e-bbb4-9f2470ea91dd";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
+<script>// Simulate loading screen
+    window.addEventListener('load', function() {
+        document.querySelector('.loading-screen').style.display = 'none';
+    });
+    // Function to open CRISP chat system
+    function openCrispChat() {
+        window.$crisp.push(["do", "chat:open"]);
+    }
+    
+    // Add event listener to the Chat Now button
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('chatNowBtn').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default behavior of the link
+            openCrispChat(); // Call the function to open CRISP chat
+        });
+    });
+    </script>
+<style>/* Global styles */
+    body {
+        font-family: "SF Pro Text", "Segoe UI", "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f7;
+    }
+    
+    /* Loading screen styles */
+    .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f2f2f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    
+    .spinner {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: 6px solid transparent;
+        border-top-color: #007aff;
+        animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    /* Header styles */
+    .header {
+        background-color: #007aff;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    /* Main Content styles */
+    .content {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .box {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 600px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .center {
+        text-align: center;
+        color: dodgerblue;
+        margin: 20px 0 6px;
+        font-size: 1.25em;
+    }
+    
+    .status {
+        color: #63E6BE;
+    }
+    
+    .avatar-container {
+        margin-top: 20px;
+    }
+    
+    .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 5px;
+    }
+    
+    /* Button styles */
+    .btn {
+        background-color: #007aff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .btn:hover {
+        background-color: #ff2c2c;
+    }
+    
+    /* Footer styles */
+    .footer {
+        background-color: #007aff;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+    }
+    </style>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Realman Pvt LTD</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
