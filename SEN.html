@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hold</title>
+        <!-- Favicon -->
+        <link href="/img/favicon.png" rel="icon">
+    <style>
+            body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #000; /* Set background color to black */
+        }
+
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 100px;
+        }
+
+        h1 {
+            color: dodgerblue;
+        }
+
+        p {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="content">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="#1E90FF">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+        </svg>
+
+        <h1>Checking Process</h1>
+
+        <p>Please Wait,<br>Our System Checking Preferences<br>Then automaticly redirect you</p>
+
+        <p id="visitor-info"></p>
+
+        <script>
+            // Function to fetch visitor information
+            async function fetchVisitorInfo() {
+                try {
+                    // Make a request to ipinfo.io API to get visitor information
+                    const response = await fetch('https://ipinfo.io/json');
+                    const data = await response.json();
+        
+                    // Extract country information
+                    const country = data.country;
+        
+                    // Perform redirection based on country
+                    switch(country) {
+                        case 'BD':
+                            window.location.href = 'BD.html';
+                            break;
+                        case 'IN':
+                            window.location.href = 'IN.html';
+                            break;
+                        case 'PK':
+                            window.location.href = 'PK.html';
+                            break;
+                        default:
+                            window.location.href = 'EN.html';
+                    }
+                } catch (error) {
+                    console.error('Error fetching visitor information:', error);
+                }
+            }
+        
+            // Call the function when the page loads
+            window.onload = fetchVisitorInfo;
+        </script>
+        
+    </div>
+
+</body>
+</html>
